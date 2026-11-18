@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', sans-serif;
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  --color-reformed-50: #fdfcf7;
+  --color-reformed-100: #f5f3e9;
+  --color-reformed-200: #eadeca;
+  --color-reformed-800: #00362b;
+  --color-reformed-900: #004b3c;
+
+  --color-accent-gold: #059669;
+  --color-accent-goldHover: #047857;
+  --color-accent-cream: #fef3c7;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #f5f3e9;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #059669;
+  border-radius: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #047857;
+}
+
+.shadow-liturgic {
+  box-shadow: 0 4px 20px -2px rgba(12, 22, 43, 0.08);
+}
+
+/* Otimização para Impressão de Roteiros A4 */
+@media print {
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+    font-family: Georgia, 'Playfair Display', serif !important;
+  }
+  header, footer, nav, .no-print {
+    display: none !important;
+  }
+  #printArea, #tutorialPrintArea, #ebook-print-area {
+    position: absolute !important;
+    left: 0 !important;
+    top: 0 !important;
+    width: 100% !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    background: white !important;
+    color: black !important;
+    display: block !important;
+  }
+  .print-border-black {
+    border-color: #000000 !important;
+  }
+  .print-bg-none {
+    background: none !important;
+    border: 1px solid #000000 !important;
+  }
+  .print-text-dark {
+    color: #000000 !important;
+  }
+  textarea, input, select {
+    border: none !important;
+    background: none !important;
+    outline: none !important;
+    padding: 0 !important;
+  }
+}
+@custom-variant dark (&:where(.dark, .dark *));

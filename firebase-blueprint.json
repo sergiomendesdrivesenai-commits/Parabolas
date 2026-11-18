@@ -1,0 +1,36 @@
+{
+  "collections": {
+    "lesson_overrides": {
+      "description": "Overrides and teacher additions for each lesson week.",
+      "documentId": "semana",
+      "fields": {
+        "youtubeLink": {
+          "type": "string",
+          "description": "YouTube URL for the lesson."
+        },
+        "teacherMessage": {
+          "type": "string",
+          "description": "Teacher's announcements or notes for the lesson."
+        },
+        "pdfUrl": {
+          "type": "string",
+          "description": "Downloadable PDF file URL or base64 data provided by the teacher."
+        },
+        "pdfFileName": {
+          "type": "string",
+          "description": "Custom file name of the downloadable PDF."
+        }
+      }
+    },
+    "app_settings": {
+      "description": "Global settings for the application including custom header image.",
+      "documentId": "settingId",
+      "fields": {
+        "headerImageUrl": {
+          "type": "string",
+          "description": "URL or base64 data for the church logo/image displayed on the right of the header."
+        }
+      }
+    }
+  }
+}

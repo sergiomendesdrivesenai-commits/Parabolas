@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O Publicano - Edição Histórica Impressa (8 Páginas)</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        paper: '#faf5eb', 
+                        ink: '#2c2620',       
+                        accent: '#7a2824',    
+                        border: '#4a3b2c',    
+                        box: '#ebdcc5',       
+                    },
+                    fontFamily: {
+                        cinzel: ['Cinzel', 'serif'],           
+                        playfair: ['Playfair Display', 'serif'], 
+                        lora: ['Lora', 'serif'],                
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Lora:ital,wght@0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        body { 
+            background-color: #faf5eb;
+            color: #1f1a17;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+        
+        .first-letter::first-letter {
+            font-family: 'Playfair Display', serif;
+            font-size: 5rem;
+            line-height: 0.8;
+            float: left;
+            margin-right: 0.15em;
+            margin-top: 0.05em;
+            font-weight: 900;
+            color: #7a2824; 
+            text-shadow: 1px 1px 2px rgba(44, 38, 32, 0.2);
+        }
+
+        .newspaper-columns {
+            column-count: 1;
+            column-gap: 2rem;
+            column-rule: 1px solid rgba(74, 59, 44, 0.25);
+        }
+
+        @media (min-width: 768px) {
+            .newspaper-columns {
+                column-count: 2;
+            }
+        }
+
+        .pull-quote {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.35rem;
+            font-style: italic;
+            font-weight: bold;
+            color: #7a2824;
+            text-align: center;
+            margin: 1.5rem 0;
+            padding: 1rem;
+            border-top: 2px dashed rgba(74, 59, 44, 0.4);
+            border-bottom: 2px dashed rgba(74, 59, 44, 0.4);
+            line-height: 1.4;
+            column-span: all;
+        }
+
+        .secret-ref {
+            font-size: 0.65rem;
+            color: #8c7b66;
+            font-family: 'Cinzel', serif;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            display: block;
+            text-align: right;
+            margin-top: 0.5rem;
+        }
+
+        .journal-page {
+            page-break-after: always;
+            break-after: page;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            border-bottom: 1px dashed rgba(74, 59, 44, 0.2);
+            padding-bottom: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        @media print {
+            body {
+                background-color: #faf5eb !important;
+            }
+            .journal-page {
+                height: 100vh;
+                padding-top: 0.5cm;
+                padding-bottom: 0.5cm;
+                border-bottom: none;
+                margin-bottom: 0;
+            }
+            .no-print {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body class="font-lora selection:bg-[#7a2824] selection:text-[#e0cdb3]">
+
+    <div class="no-print bg-accent text-[#e0cdb3] text-center py-3 px-4 font-cinzel text-sm font-bold shadow-md">
+        <i class="fa-solid fa-print mr-2"></i> MODO DE IMPRESSÃO EXPANDIDO (8 PÁGINAS): Pressione Ctrl+P e ative "Gráficos de Fundo".
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 md:px-12">
+
+        <!-- ================= PÁGINA 1: CAPA & O ESCÂNDALOS DA CORTE ================= -->
+        <section class="journal-page pt-4">
+            <div>
+                <header class="border-b-[6px] border-double border-border pb-4 mb-6 text-center">
+                    <div class="text-xs font-bold uppercase tracking-[0.2em] border-b border-border pb-2 mb-3 text-[#614f3b]">
+                        Província da Judeia • Império Romano • Ano 30 d.C. • Edição Histórica Diária
+                    </div>
+                    <h1 class="font-cinzel text-6xl md:text-8xl font-black text-ink mb-1 tracking-tight">O PUBLICANO</h1>
+                    <p class="font-lora italic text-base text-[#524334]">"A verdade fiscalizada, desde os tribunais de César até às margens do Mar da Galileia."</p>
+                </header>
+
+                <main class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+                    <!-- Artigo Principal de Capa: Filho Pródigo -->
+                    <article class="col-span-1 lg:col-span-8 border-r-0 lg:border-r border-border/20 pr-0 lg:pr-4">
+                        <div class="border-t-4 border-accent pt-3">
+                            <div class="flex justify-between items-center mb-3">
+                                <span class="bg-accent text-[#e0cdb3] font-cinzel text-[10px] font-bold px-2 py-0.5 uppercase tracking-wider">Reportagem Especial: Crise Familiar</span>
+                                <span class="text-xs font-bold uppercase text-[#6b5238]"><i class="fa-solid fa-feather-pointed text-accent mr-1"></i> Por Malco Ben-Sira</span>
+                            </div>
+                            <h2 class="font-playfair text-3xl md:text-5xl font-black leading-tight mb-4 text-ink">
+                                Crise no Vale do Jordão: Herdeiro Exige Partilha em Vida, Dilapida Fortuna no Egito e Retorna na Miséria
+                            </h2>
+                            <h3 class="text-lg italic text-[#4f4234] mb-6 font-playfair leading-relaxed">
+                                Em ato de insubordinação que chocou o conselho de anciãos, jovem aristocrata converte ativos agrícolas em ouro, financia vida nababesca em Alexandria e acaba nos chiqueiros.
+                            </h3>
+                            <div class="newspaper-columns text-justify text-sm leading-relaxed text-ink">
+                                <p class="first-letter">A pacata e tradicional rotina das elites latifundiárias das proximidades de Jericó foi abalada por um drama familiar sem precedentes na história recente da província. O caso envolve o filho caçula de um dos mais prósperos proprietários de terras da região, que exigiu formalmente a liquidação e a partilha imediata da sua quota-parte na herança paterna.</p>
+                                <p class="mb-3">Especialistas na Lei consultados por *O Publicano* explicam que, embora o pedido possua amparo no direito civil, no campo moral, exigir a herança com o pai ainda vivo e com saúde é o equivalente a desejar públicamente a sua morte.</p>
+                                <div class="pull-quote">"Ele chegou aos portões exalando o odor nauseabundo dos porcos e vestido em trapos. Todos esperávamos o açoite, mas o pai correu e o beijou."</div>
+                                <p class="mb-3">Com os fundos em mãos, o rapaz partiu para Alexandria, no Egito, onde dissipou toda a sua fortuna de forma irresponsável com jogatinas. Contudo, uma severa crise inflacionária atingiu a região do Nilo. Sem crédito e abandonado por falsos aliados, o rapaz submeteu-se ao extremo degradante de aceitar emprego como tratador de suínos na fazenda de um cidadão romano.</p>
+                                <p>Tomado pela fome extrema a ponto de cobiçar as alfarrobas dos animais, o herdeiro iniciou a jornada de volta. Para surpresa de todos, o patriarca quebrou os protocolos orientais: correu ao encontro do filho na estrada, ordenou roupas finas, anel de selo e o abate do novilho gordo. A decisão abriu uma crise interna: o primogênito recusou-se a entrar na festa, acusando o pai de injustiça laboral.</p>
+                            </div>
+                            <span class="secret-ref">Ref: Lucas 15.11-32</span>
+                        </div>
+                    </article>
+
+                    <!-- Coluna Lateral Direita da Capa -->
+                    <aside class="col-span-1 lg:col-span-4 flex flex-col gap-6">
+                        <article class="border-t-4 border-[#25323a] pt-3">
+                            <span class="bg-[#25323a] text-[#e0cdb3] font-cinzel text-[10px] font-bold px-2 py-0.5 uppercase mb-3 inline-block">Plantão Policial</span>
+                            <h2 class="font-playfair text-xl font-black leading-tight mb-2 text-[#1a2329]">Terror e Omissão Institucional na Estrada Sinuosa de Jericó</h2>
+                            <div class="text-justify text-xs leading-relaxed text-ink">
+                                <p class="mb-2">Um comerciante de tecidos de Jerusalém sofreu uma emboscada violenta perpetrada por salteadores no deserto. O homem foi desprovido de seus bens e deixado semimorto.</p>
+                                <p>O caso provocou intensos protestos após a descoberta de que autoridades ministeriais omitiram o socorro básico de saúde. **(Confira o grande dossiê policial na Página 2)**.</p>
+                            </div>
+                            <span class="secret-ref">Ref: Lucas 10.25</span>
+                        </article>
+
+                        <article class="border-t-4 border-[#3f4a25] pt-3">
+                            <span class="bg-[#3f4a25] text-[#e0cdb3] font-cinzel text-[10px] font-bold px-2 py-0.5 uppercase mb-3 inline-block">Ameaça Agrícola</span>
+                            <h2 class="font-playfair text-xl font-black leading-tight mb-2 text-[#30381d]">Sabotagem por Joio Ameaça Lavouras em Saron</h2>
+                            <div class="text-justify text-xs leading-relaxed text-ink">
+                                <p>Campos de trigo de primeira linha foram infestados por sementes de joio em uma aparente ação criminosa noturna. A diretoria técnica proibiu a monda imediata e montou uma estratégia para a colheita. **(Página 5)**.</p>
+                            </div>
+                            <span class="secret-ref">Ref: Mateus 13.24</span>
+                        </article>
+                    </aside>
+                </main>
+            </div>
+            <footer class="border-t border-border/40 pt-1 pb-2 text-center text-[10px] uppercase tracking-widest text-[#73634e]">
+                Página 1 • O Publicano Diário • Capa
+            </footer>
+        </section>
+
+
+        <!-- ================= PÁGINA 2: COBERTURA JORNALÍSTICA CONSISTENTE (BOM SAMARITANO) ================= -->
+        <section class="journal-page pt-4">
+            <div>
+                <header class="border-b-2 border-border pb-2 mb-6 flex justify-between items-center">
+                    <span class="font-cinzel text-sm font-bold text-accent">Página 2 • Caderno de Polícia, Cidadania & Estado</span>
+                    <span class="font-lora italic text-xs text-ink">GRANDES REPORTAGENS INVESTIGATIVAS</span>
+                </header>
+
+                <main class="grid grid-cols-1 gap-6">
+                    <article class="border-t-4 border-slate-900 pt-3">
+                        <span class="text-xs font-bold text-slate-800 uppercase tracking-widest block mb-2"><i class="fa-solid fa-file-invoice-dollar"></i> DOSSIÊ JURÍDICO: O ESCÂNDALO DA OMISSÃO DE DEVER NO DESERTO DA JUDEIA</span>
+                        <h2 class="font-playfair text-3xl md:text-4xl font-black leading-tight mb-4 text-ink">
+                            Atentado no 'Caminho de Sangue' Desmascara Falhas de Segurança e Expõe Corporativismo de Líderes do Templo
+                        </h2>
+                        
+                        <div class="newspaper-columns text-justify text-sm leading-relaxed text-ink">
+                            <p class="mb-4">O recente relatório de ocorrências emitido pela milícia civil da província trouxe à tona não apenas o alarmante índice de criminalidade na rota comercial que declina abruptamente de Jerusalém até o oásis de Jericó, mas também um profundo colapso ético e civil no seio das instituições eclesiásticas de Israel. Um próspero atacadista de tecidos foi brutalmente interceptado nas curvas cegas do desfiladeiro por uma quadrilha organizada de salteadores de fronteira.</p>
+                            
+                            <p class="mb-4">Segundo o laudo pericial preliminar, o comerciante sofreu múltiplas fraturas e lacerações cranianas. Os criminosos confiscaram o lote de tecidos e o capital de giro da vítima, despindo-a integralmente no intuito de inviabilizar sua identificação civil imediata. O homem foi lançado inconsciente em estado pré-comatoso e com choque hipovolêmico na vala de drenagem marginal que flanqueia o penhasco calcário.</p>
+
+                            <p class="mb-4">Contudo, o núcleo da indignação social e do debate jurídico estabeleceu-se a partir da identificação dos transeuntes que cruzaram a cena do crime minutos após a fuga do bando. O primeiro oficial a registrar contato visual com o ferido foi um Sacerdote do Templo, que retornava de seu turno litúrgico regular na capital jurídica da província. Conforme apontam os depoimentos colhidos de vigias de caravanas, ao mapear o corpo coberto de hematomas, o eclesiástico acionou uma manobra de desvio tático lateral de quase dez metros, transitando pela margem oposta para contornar o sinistro.</p>
+                            
+                            <p class="mb-4">Minutos mais tarde, um Levita, funcionário público pertencente à máquina burocrática e de apoio do santuário, repetiu rigorosamente o comportamento de evasão de dever civil. Ele reduziu o passo, aproximou-se da borda do precipício, realizou inspeção ocular rápida do estado de agonia do trabalhador e acelerou a marcha em direção a Jericó.</p>
+
+                            <div class="pull-quote">"As justificativas teóricas de contaminação por cadáver caíram por terra perante a perícia médica: o homem estava vivo e clamava por socorro básico."</div>
+
+                            <p class="mb-4">Juristas e especialistas no direito civil local apontam que ambos os eclesiásticos incidiram na tipificação de omissão deliberada de socorro com agravante de abandono de incapaz. O pretexto burocrático de evitar a "impureza ritual" (que os impediria temporariamente de exercer funções remuneradas no Templo ao tocarem em um morto) foi severamente criticado por magistrados independentes, que lembraram que o direito à preservação da vida antecede qualquer ordenamento alfandegário ou cerimonial.</p>
+                            
+                            <p class="mb-4">A reversão do óbito iminente foi garantida por um comerciante estrangeiro natural de Samaria. Rompendo uma barreira de discriminação socioétnica secular que proíbe interações comerciais e civis entre judeus e samaritanos, o motorista desembarcou e iniciou os procedimentos de estabilização do paciente em pleno teatro de operações desértico. Ele higienizou as feridas com vinho (utilizado como antisséptico para combater infecções bacterianas) e aplicou azeite de oliva purificado para atenuar as dores nas terminações nervosas expostas, antes de cobrir o paciente com faixas de proteção.</p>
+                        </div>
+
+                        <div class="my-6 bg-box/40 border border-border/30 p-4 rounded grid grid-cols-1 md:grid-cols-3 gap-4">
+                            <div class="md:col-span-2 text-xs text-justify italic leading-relaxed text-ink">
+                                <strong>Depoimento do Gerente da Estalagem Privada sob Juramento:</strong><br>
+                                "O samaritano deu entrada na minha hospedaria carregando o judeu moribundo montado em seu próprio animal de carga, enquanto ele mesmo vinha a pé conduzindo as rédeas. Ele passou a noite inteira em claro ministrando hidratação e trocando os curativos do ferido. Na manhã seguinte, retirou dois denários de prata legítima, entregou-me como caução operacional e declarou: 'Administre o tratamento clínico e a nutrição deste homem; se houver qualquer custo excedente ou despesa médica complementar, eu emitirei a quitação integral de volta quando regressar do meu circuito de negócios'."
+                            </div>
+                            <div class="bg-border/10 p-3 border-l-2 border-accent flex flex-col justify-center text-center">
+                                <span class="font-cinzel text-[10px] font-bold text-accent">STATUS CLÍNICO</span>
+                                <span class="font-playfair text-xl font-black my-1 text-slate-900">ESTÁVEL</span>
+                                <span class="text-[9px] text-stone-600">Paciente transferido para a ala de repouso privado da hospedaria de Jericó.</span>
+                            </div>
+                        </div>
+
+                        <div class="text-justify text-xs leading-relaxed text-stone-600">
+                            <p>O desdobramento do caso fixou uma nova jurisprudência prática sobre os limites do dever cívico. O veredicto preliminar do comitê de análise ética concluiu que a verdadeira cidadania e o conceito legal de "próximo" não são determinados por títulos eclesiásticos ou linhagens sanguíneas, mas pela ação concreta de misericórdia e mitigação do sofrimento alheio.</p>
+                        </div>
+                        <span class="secret-ref">Ref: Lucas 10.30-37</span>
+                    </article>
+                </main>
+            </div>
+            <footer class="border-t border-border/40 pt-1 pb-2 text-center text-[10px] uppercase tracking-widest text-[#73634e]">
+                Página 2 • O Publicano Diário • Caderno de Polícia / Reportagem Especial
+            </footer>
+        </section>
+
+
+        <!-- ================= PÁGINA 3: ECONOMIA & AUDITORIA DE INFRAESTRUTURA ================= -->
+        <section class="journal-page pt-4">
+            <div>
+                <header class="border-b-2 border-border pb-2 mb-6 flex justify-between items-center">
+                    <span class="font-cinzel text-sm font-bold text-accent">Página 3 • Economia & Negócios</span>
+                    <span class="font-lora italic text-xs text-ink">Ano 30 d.C. • Jerusalém</span>
+                </header>
+
+                <main class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+                    <!-- Artigo Principal: Torre Inacabada -->
+                    <article class="col-span-1 lg:col-span-7 border-r-0 lg:border-r border-border/20 pr-0 lg:pr-4">
+                        <div class="border-t-4 border-accent pt-3">
+                            <span class="text-xs font-bold text-accent uppercase tracking-widest block mb-2"><i class="fa-solid fa-compass-drafting"></i> Planejamento de Infraestrutura</span>
+                            <h2 class="font-playfair text-3xl font-black leading-tight mb-4 text-ink">
+                                Fiasco Imobiliário: Embargo em Torre de Vigia Expõe Falta de Liquidez e Falha de Planejamento
+                            </h2>
+                            <p class="font-playfair italic text-sm text-[#4f4234] mb-4">
+                                Proprietário rural inicia fundação de grande porte focado apenas em projeções otimistas, esgota o capital antes da cobertura e vira piada entre comitivas.
+                            </p>
+                            <div class="text-justify text-sm leading-relaxed text-ink flex flex-col gap-3">
+                                <p>O departamento de engenharia civil e planejamento rural determinou o embargo imediato das obras de uma monumental torre de vigia nos arredores agrícolas da província. A estrutura, destinada ao monitoramento de safras, teve seus recursos esgotados logo na fase inicial de alvenaria.</p>
+                                <p>Investigadores financeiros que auditaram o projeto constataram uma negligência básica de gestão: o investidor iniciou o assentamento de pedras e tijolos sem antes sentar-se para calcular os custos reais e analisar se possuía fluxo de caixa suficiente para concluir a obra.</p>
+                                <p>Com o capital drenado nos alicerces, o canteiro foi abandonado, transformando a estrutura em um monumento ao fracasso de gestão. O esqueleto inacabado tornou-se motivo de chacota entre as caravanas comerciais que cruzam a estrada: "Este homem começou a construir e não pôde acabar". Especialistas reforçam a necessidade de auditorias orçamentárias prévias.</p>
+                            </div>
+                            <span class="secret-ref">Ref: Lucas 14.28-30</span>
+                        </div>
+                    </article>
+
+                    <aside class="col-span-1 lg:col-span-5 flex flex-col justify-between">
+                        <div class="flex flex-col gap-6">
+                            <article class="border-b border-border/20 pb-4">
+                                <span class="text-xs font-bold text-slate-800 uppercase tracking-widest block mb-1">Fraude Operacional</span>
+                                <h3 class="font-playfair text-xl font-black mb-2">Monarca Revoga Indulto de Diretor Executivo por Coerção Fiscal</h3>
+                                <p class="text-xs text-justify leading-relaxed text-ink">
+                                    Um diretor que acumulava uma dívida de 10.000 talentos de prata teve seu perdão anulado pelo rei. Minutos após receber anistia total da dívida bilionária sob alegações de falência, o gestor mandou prender um subordinado que lhe devia a quantia irrisória de 100 denários. O rei revogou a medida e determinou prisão perpétua.
+                                </p>
+                                <span class="secret-ref">Ref: Mateus 18.21-35</span>
+                            </article>
+
+                            <article>
+                                <span class="font-cinzel text-[10px] font-bold text-amber-900 block mb-1">Insensatez Contábil</span>
+                                <h3 class="font-playfair text-lg font-black mb-1">CEO Agrícola Falece de Enfarte Após Megaprojeto de Celeiros</h3>
+                                <p class="text-xs text-justify leading-relaxed text-ink">
+                                    Um investidor de grande porte faleceu subitamente na última noite após projetar a demolição de seus silos para construir megaestruturas. Ele havia declarado estabilidade financeira vitalícia.
+                                </p>
+                                <span class="secret-ref">Ref: Lucas 12.16-21</span>
+                            </article>
+                        </div>
+                    </aside>
+                </main>
+            </div>
+            <footer class="border-t border-border/40 pt-1 pb-2 text-center text-[10px] uppercase tracking-widest text-[#73634e]">
+                Página 3 • O Publicano Diário • Economia
+            </footer>
+        </section>
+
+
+        <!-- ================= PÁGINA 4: TRABALHO & REMUNERAÇÃO INDUSTRIAL ================= -->
+        <section class="journal-page pt-4">
+            <div>
+                <header class="border-b-2 border-border pb-2 mb-6 flex justify-between items-center">
+                    <span class="font-cinzel text-sm font-bold text-accent">Página 4 • Relações de Trabalho & Legislação</span>
+                    <span class="font-lora italic text-xs text-ink">Ano 30 d.C. • Galileia</span>
+                </header>
+
+                <main class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+                    <article class="col-span-1 lg:col-span-8 border-r-0 lg:border-r border-border/20 pr-0 lg:pr-4">
+                        <div class="border-t-4 border-emerald-800 pt-3">
+                            <span class="text-xs font-bold text-emerald-800 uppercase tracking-widest block mb-2"><i class="fa-solid fa-users-gear"></i> Dissídios Coletivos & Mercado</span>
+                            <h2 class="font-playfair text-3xl font-black leading-tight mb-4 text-ink">
+                                Protesto na Safra de Uvas: Diaristas da Madrugada Acusam Patrão de Quebra de Equidade
+                            </h2>
+                            <p class="font-playfair italic text-sm text-[#4f4234] mb-4">
+                                Operários agrícolas ameaçam paralisação após fazendeiro pagar o mesmo valor fixo de um denário a trabalhadores contratados na última hora do expediente.
+                            </p>
+                            <div class="text-justify text-sm leading-relaxed text-ink flex flex-col gap-3">
+                                <p>Uma tensa assembleia de trabalhadores rurais inflamou os ânimos nas cooperativas agrícolas da Galileia central. Diaristas contratados às 6 horas da manhã para a colheita sazonal de uvas formalizaram uma denúncia de injustiça remuneratória contra o proprietário de um grande complexo vinícola.</p>
+                                <p>De acordo com os livros de ponto, o produtor negociou individualmente o piso salarial padrão de 1 denário por doze horas de trabalho. Devido à urgência logística da safra, o fazendeiro integrou novos operários às 9h, 12h, 15h e 17h, restando apenas uma hora para o encerramento das atividades do dia.</p>
+                                <p>A crise eclodiu no fechamento do caixa. Seguindo normas de fluxo, o feitor pagou 1 denário aos últimos contratados. As equipes da madrugada presumiram que receberiam uma bonificação proporcional pelas horas extras de exposição térmica. Contudo, receberam o mesmo valor nominal. O proprietário defendeu a autonomia de seu capital: "Não combinaste comigo um denário? É mau o teu olho porque eu sou bom?". O caso abreu debate sobre os limites entre o rigor contratual e a generosidade empresarial.</p>
+                            </div>
+                            <span class="secret-ref">Ref: Mateus 20.1-16</span>
+                        </div>
+                    </article>
+
+                    <aside class="col-span-1 lg:col-span-4 flex flex-col justify-between">
+                        <div class="border-t-4 border-amber-900 pt-3">
+                            <span class="font-cinzel text-[10px] font-bold text-amber-900 block mb-1">Proteção de Ativos</span>
+                            <h3 class="font-playfair text-xl font-black mb-2">Especulador Liquida Portfolio por Pérola de Grande Valor</h3>
+                            <p class="text-xs text-justify leading-relaxed text-ink">
+                                Um conhecido comerciante de pedras preciosas surpreendeu o mercado de commodities ao vender todos os seus imóveis rurais e debêntures líquidas para concentrar seu capital na aquisição de uma única joia rara localizada em um pregão privado. "O retorno sobre o investimento deste ativo transcende os índices convencionais", defendeu seu corretor.
+                            </p>
+                            <span class="secret-ref">Ref: Mateus 13.45</span>
+                        </div>
+                    </aside>
+                </main>
+            </div>
+            <footer class="border-t border-border/40 pt-1 pb-2 text-center text-[10px] uppercase tracking-widest text-[#73634e]">
+                Página 4 • O Publicano Diário • Caderno de Trabalho
+            </footer>
+        </section>
+
+
+        <!-- ================= PÁGINA 5: CONFLITOS AGRÁRIOS & REVOLTA ARMADA ================= -->
+        <section class="journal-page pt-4">
+            <div>
+                <header class="border-b-2 border-border pb-2 mb-6 flex justify-between items-center">
+                    <span class="font-cinzel text-sm font-bold text-accent">Página 5 • Conflitos de Terra & Geopolítica</span>
+                    <span class="font-lora italic text-xs text-ink">Ano 30 d.C. • Fronteiras da Galileia</span>
+                </header>
+
+                <main class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+                    <article class="col-span-1 lg:col-span-8 border-r-0 lg:border-r border-border/20 pr-0 lg:pr-4">
+                        <div class="border-t-4 border-[#7a2e2e] pt-3">
+                            <span class="text-xs font-bold text-[#7a2e2e] uppercase tracking-widest block mb-2"><i class="fa-solid fa-burst"></i> Insurreição Rústica</span>
+                            <h2 class="font-playfair text-3xl font-black leading-tight mb-4 text-ink">
+                                Insurreição no Vinhedo: Meeiros Armam Emboscada, Executam Oficiais e Degolam o Filho do Dono
+                            </h2>
+                            <div class="text-justify text-sm leading-relaxed text-ink flex flex-col gap-3">
+                                <p>Uma escalada violenta motivou o deslocamento emergencial de destacamentos de coortes romanas para conter uma rebelião agrária na Galileia. Um grande investidor internacional, que havia implementado um complexo equipado com cerca viva de proteção, lagar industrial e torre de vigilância, arrendou as instalações para meeiros locais e viajou para o exterior.</p>
+                                <p>Ao se aproximar o tempo da vindima, o proprietário enviou servos seniores para recolher a participação nos dividendos. Em um levante armado, os lavradores espancaram e executaram a comitiva com ferramentas de campo. Um segundo grupo de funcionários sofreu o mesmo tratamento.</p>
+                                <p>Acreditando no respeito filial, o patriarca enviou seu próprio filho e herdeiro direto. Ao avistarem o jovem cruzar os portões, os meeiros planejaram o crime de forma fria: "Este é o herdeiro; vinde, matemo-lo e fiquemos com a sua herança!". O rapaz foi arrastado para fora dos muros e degolado. O proprietário retornará com força militar para recuperar o ativo patrimonial.</p>
+                            </div>
+                            <span class="secret-ref">Ref: Mateus 21.33-41</span>
+                        </div>
+                    </article>
+
+                    <aside class="col-span-1 lg:col-span-4 flex flex-col justify-between">
+                        <div class="border-t-4 border-slate-700 pt-3">
+                            <span class="font-cinzel text-[10px] font-bold text-slate-700 block mb-1">Estratégia Agronômica</span>
+                            <h3 class="font-playfair text-xl font-black mb-2">Diretoria Adia Monda de Joio Tóxico nas Lavouras</h3>
+                            <p class="text-xs text-justify leading-relaxed text-ink">
+                                A gerência técnica dos latifúndios de Saron emitiu parecer sobre o ataque de sabotagem biológica por joio (*Lolium temulentum*). A monda mecânica foi vetada na fase atual porque as raízes estão entrelaçadas com as do trigo bom no subsolo. A triagem ocorrerá rigorosamente na ceifa: o trigo será recolhido aos celeiros e o joio encaminhado para incineração térmica.
+                            </p>
+                            <span class="secret-ref">Ref: Mateus 13.28-30</span>
+                        </div>
+                    </aside>
+                </main>
+            </div>
+            <footer class="border-t border-border/40 pt-1 pb-2 text-center text-[10px] uppercase tracking-widest text-[#73634e]">
+                Página 5 • O Publicano Diário • Agronegócios
+            </footer>
+        </section>
+
+
+        <!-- ================= PÁGINA 6: COLUNA SOCIAL & CHACINA DE ETIQUETA (MANUAL PRÁTICO) ================= -->
+        <section class="journal-page pt-4">
+            <div>
+                <header class="border-b-2 border-border pb-2 mb-6 flex justify-between items-center">
+                    <span class="font-cinzel text-sm font-bold text-accent">Página 6 • Crônica Social, Humor & Boas Maneiras</span>
+                    <span class="font-lora italic text-xs text-ink">Ano 30 d.C. • Capítulos Urbanos</span>
+                </header>
+
+                <main class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+                    <article class="col-span-1 lg:col-span-7 border-r-0 lg:border-r border-border/20 pr-0 lg:pr-4">
+                        <div class="border-t-4 border-[#3d3123] pt-3 bg-box/15 p-4 border border-border/20">
+                            <span class="bg-border text-[#e0cdb3] font-cinzel text-[10px] font-bold px-2 py-0.5 uppercase tracking-widest mb-3 block text-center">Boicote Comercial</span>
+                            <h2 class="font-playfair text-2xl font-black leading-tight mb-4 text-ink">
+                                Elite Sabota Banquete Real e Rei Convoca Cegos e Mendigos das Praças Públicas
+                            </h2>
+                            <div class="text-justify text-xs leading-relaxed text-ink flex flex-col gap-2">
+                                <p>Um influente magnata enfrentou um constrangimento público sem precedentes na crônica social. Após semanas organizando um banquete nupcial para seu filho e mobilizando insumos caros, os convidados tradicionais declinaram de forma coordenada através de escusas superficiais: um alegou necessidade de vistoriar terras, outro precisava testar juntas de bois e outro justificou ausência por matrimônio recente.</p>
+                                <p>Revoltado com o boicote de seu círculo corporativo, o anfitrião ordenou uma varredura compulsória nas praças e becos da cidade: "Ide pelas saídas dos caminhos e trazei cegos, paralíticos e mendigos, para que a minha casa fique cheia". O empresário decretou que nenhum dos convidados originais provará de sua ceia.</p>
+                            </div>
+                            <span class="secret-ref">Ref: Lucas 14.15-24</span>
+                        </div>
+                    </article>
+
+                    <!-- SEÇÃO MANTIDA E EVIDENCIADA DA CRÔNICA CÔMICA DE ETIQUETA -->
+                    <aside class="col-span-1 lg:col-span-5 flex flex-col justify-between">
+                        <div class="border-t-4 border-zinc-700 pt-3 bg-red-900/5 p-4 border border-border/20">
+                            <span class="font-cinzel text-[10px] font-bold text-accent block mb-1"><i class="fa-solid fa-face-laugh-beam"></i> CRÔNICA: MANUAL DE BOAS MANEIRAS</span>
+                            <h3 class="font-playfair text-xl font-black mb-2 text-slate-900">Manual Prático: Passando Vergonha em Casamentos de Luxo</h3>
+                            <p class="text-xs text-justify leading-relaxed text-ink mb-2">
+                                Nosso colunista de comportamento e alta sociedade testemunhou uma cena hilária no último final de semana durante uma recepção nupcial patrícia. Um aristocrata de nariz empinado correu para ocupar a cabeceira de honra da mesa principal do *triclinium*, no intuito de pavonear prestígio corporativo.
+                            </p>
+                            <p class="text-xs text-justify leading-relaxed text-ink mb-2">
+                                Pouco depois, adentrou um político e magistrado do mais alto escalão civil. O dono da casa foi obrigado a tocar no ombro do sujeito folgado e pedir na frente de todos os convivas: "Senhor, ceda o lugar, por favor".
+                            </p>
+                            <p class="text-xs text-justify italic leading-relaxed text-stone-700">
+                                O homem teve que descer para a última cadeira disponível, perto da área de serviço e da porta de saída, vermelho como uma romã madura sob o riso abafado dos garçons! Fica a dica técnica de etiqueta: ao entrar, escolha sempre o último lugar, pois quem se humilha será exaltado!
+                            </p>
+                            <span class="secret-ref">Ref: Lucas 14.7-11</span>
+                        </div>
+                    </aside>
+                </main>
+            </div>
+            <footer class="border-t border-border/40 pt-1 pb-2 text-center text-[10px] uppercase tracking-widest text-[#73634e]">
+                Página 6 • O Publicano Diário • Variedades & Humor
+            </footer>
+        </section>
+
+
+        <!-- ================= PÁGINA 7: LOGÍSTICA & TRIAGEM MARÍTIMA ================= -->
+        <section class="journal-page pt-4">
+            <div>
+                <header class="border-b-2 border-border pb-2 mb-6 flex justify-between items-center">
+                    <span class="font-cinzel text-sm font-bold text-accent">Página 7 • Cadeia de Suprimentos & Logística</span>
+                    <span class="font-lora italic text-xs text-ink">Ano 30 d.C. • Setores de Trânsito</span>
+                </header>
+
+                <main class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+                    <article class="col-span-1 lg:col-span-6 border-r-0 lg:border-r border-border/20 pr-0 lg:pr-4">
+                        <div class="border-t-4 border-accent pt-3">
+                            <span class="text-xs font-bold text-[#7a2e2e] uppercase tracking-widest block mb-2"><i class="fa-solid fa-clock"></i> Gestão de Insumos</span>
+                            <h2 class="font-playfair text-3xl font-black leading-tight mb-4 text-ink">
+                                Falha Logística em Evento Noturno Bloqueia Entrada de Assessoras sem Óleo
+                            </h2>
+                            <div class="text-justify text-sm leading-relaxed text-ink flex flex-col gap-3">
+                                <p>Uma grave falha de planejamento de insumos transformou uma recepção nupcial noturna em um gargalo logístico na madrugada de ontem. Dez assessoras responsáveis pela iluminação do cortejo do noivo dividiram-se entre a prudência técnica e a negligência operacional.</p>
+                                <p>Devido a atrasos na viagem do noivo, as equipes adormeceram nos postos de controle. Ao soar o alarme de aproximação, constatou-se que metade das profissionais não havia comprado galões sobressalentes de óleo para suas tochas. As previdentes negaram o compartilhamento. Durante o período de compra das retardatárias, as portas foram lacradas e o acesso foi sumariamente negado.</p>
+                            </div>
+                            <span class="secret-ref">Ref: Mateus 25.1-13</span>
+                        </div>
+                    </article>
+
+                    <article class="col-span-1 lg:col-span-6">
+                        <div class="border-t-4 border-slate-800 pt-3">
+                            <span class="text-xs font-bold text-slate-800 uppercase tracking-widest block mb-2"><i class="fa-solid fa-fish"></i> Controle de Qualidade Pesqueiro</span>
+                            <h2 class="font-playfair text-3xl font-black leading-tight mb-4 text-ink">
+                                Cooperativas de Pesca Adotam Filtro Biológico em Redes de Arraste na Costa
+                            </h2>
+                            <div class="text-justify text-sm leading-relaxed text-ink flex flex-col gap-3">
+                                <p>A associação de armadores do Mar da Galileia detalhou seus novos processos de aumento de eficiência na captura de pescados através de redes de arraste de grande profundidade.</p>
+                                <p>O sistema consiste no lançamento de redes industriais que coletam indiscriminadamente toda classe de fauna marítima. A triagem ocorre estritamente em terra firme após o recolhimento total: os operários puxam as redes para a praia e separam os espécimes de alto valor para comercialização, destinando o refugo nocivo à incineração imediata.</p>
+                            </div>
+                            <span class="secret-ref">Ref: Mateus 13.47-50</span>
+                        </div>
+                    </article>
+                </main>
+            </div>
+            <footer class="border-t border-border/40 pt-1 pb-2 text-center text-[10px] uppercase tracking-widest text-[#73634e]">
+                Página 7 • O Publicano Diário • Infraestrutura
+            </footer>
+        </section>
+
+
+        <!-- ================= PÁGINA 8: CRÔNICA DE RESGATE (OVELHA) & NOTA OCULTA DO EVANGELHO ================= -->
+        <section class="journal-page pt-4">
+            <div>
+                <header class="border-b-[6px] border-double border-border pb-4 mb-6 text-center">
+                    <span class="font-cinzel text-xs font-bold tracking-[0.3em] uppercase text-[#614f3b]">Seção de Grandes Crônicas, Classificados Municipais & Fechamento</span>
+                </header>
+
+                <main class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+                    <!-- Artigo Principal da Página 8: Ovelha Perdida -->
+                    <article class="col-span-1 lg:col-span-7 border-r-0 lg:border-r border-border/20 pr-0 lg:pr-4 flex flex-col justify-between">
+                        <div class="border-t-4 border-accent pt-3">
+                            <span class="text-xs font-bold uppercase tracking-wider block mb-1 text-accent"><i class="fa-solid fa-mountain-sun"></i> Operações de Busca & Resgate</span>
+                            <h2 class="font-playfair text-2xl md:text-3xl font-black leading-tight mb-4 text-ink">
+                                Obsessão nos Desfiladeiros: A Saga do Pastor que Desafiou o Deserto por 1% de seu Rebanho
+                            </h2>
+                            <div class="text-justify text-xs md:text-sm leading-relaxed text-ink flex flex-col gap-3">
+                                <p class="first-letter">
+                                    Uma impressionante operação de busca e salvamento em alta montanha, conduzida unilateralmente por um pastor na região desértica da Judeia, reacendeu debates sobre os limites econômicos da gestão de riscos rurais. O operador, responsável por um lote de cem ovelhas, acionou um protocolo de emergência após constatar a falta de apenas uma unidade ao final da tarde.
+                                </p>
+                                <p>
+                                    Deixando as 99 ovelhas restantes em uma depression semi-protegida do deserto, o homem marchou em direção às escarpas rochosas sob condições severas de visibilidade declinante. Ele enfrentou ventos cortantes e trilhas instáveis, mapeando fendas profundas onde o animal poderia ter caído.
+                                </p>
+                                <p>
+                                    Ao localizar o animal exausto e ferido pelos espinhos, o pastor içou o ativo de quase 40 quilos sobre os próprios ombros, carregando-o de volta para a planície. Ao cruzar os limites do vilarejo, convocou vizinhos para celebrar: "Alegrai-vos comigo, porque já achei a minha ovelha que se havia perdido".
+                                </p>
+                            </div>
+                            <span class="secret-ref">Ref: Lucas 15.3-7</span>
+                        </div>
+
+                        <!-- NOTA DE RODAPÉ MINÚSCULA - O EVANGELHO SENDO IGNORADO PELO JORNAL -->
+                        <div class="mt-6 pt-3 border-t border-border/30 bg-stone-200/50 p-2.5 text-[10px] text-justify text-ink leading-snug">
+                            <span class="font-cinzel text-[8px] font-bold text-stone-500 uppercase block tracking-wider mb-0.5"><i class="fa-solid fa-triangle-exclamation"></i> Ocorrências Menores / Variedades</span>
+                            <h4 class="font-bold font-playfair text-stone-700 mb-0.5">Boatos de Curandeirismo e Aglomeração Fluvial na Galileia são Monitorados pela Guarda</h4>
+                            <p>
+                                Pequenos relatórios emitidos por centuriões de postos avançados de Cafarnaum mencionam que um carpinteiro itinerante de Nazaré continua a atrair pequenos grupos de camponeses e pescadores locais às margens do lago. O homem, que prega sem autorização formal do Sinédrio, estaria realizando supostas curas de patologias crônicas de forma gratuita — ato que médicos da província denunciaram como concorrência desleal e charlatanismo. 
+                            </p>
+                            <p class="mt-1 text-[9px] text-stone-600">
+                                No último sábado, assessores de segurança relataram distúrbios logísticos menores quando o grupo tentou distribuir pães e peixes na grama, gerando acúmulo de lixo orgânico. O comando militar informou que não enviará reforços de cavalaria, pois o movimento é considerado "irrelevante, de cunho puramente folclórico e sem capacidade de ameaçar a estabilidade econômica de Roma ou o prestígio dos sacerdotes civis". O caso foi arquivado sem abertura de inquérito.
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- Classificados Remanescentes -->
+                    <aside class="col-span-1 lg:col-span-5 flex flex-col justify-between">
+                        <div class="border-t-4 border-accent pt-3 bg-box/20 p-4 border border-border/20">
+                            <h3 class="font-cinzel text-lg font-black text-center mb-4 tracking-widest text-[#3d3123]">CLASSIFICADOS MUNICIPAIS</h3>
+                            
+                            <div class="flex flex-col gap-4 text-justify">
+                                <div class="border-b border-dashed border-border/40 pb-4">
+                                    <h4 class="font-bold text-accent text-xs uppercase"><i class="fa-solid fa-seedling mr-1"></i> Sementes Premium Selecionadas</h4>
+                                    <p class="text-[11px] text-ink leading-tight">
+                                        **COMPLIANCE AGRÍCOLA:** Vendo grãos de alta produtividade (retornos de até 100 por 1). Adverte-se: os resultados dependem estritamente do solo. Não nos responsabilizamos por sementes jogadas em caminhos compactados ou espinheiros. **Cód: Marcos 4.1**
+                                    </p>
+                                </div>
+
+                                <div class="pb-2">
+                                    <h4 class="font-bold text-accent text-xs uppercase"><i class="fa-solid fa-wine-bottle mr-1"></i> Odres de Couro Flexível</h4>
+                                    <p class="text-[11px] text-ink leading-tight">
+                                        **EVITE PERDA DE INSUMOS:** Lote de odres novos recém-curtidos. Alerta químico: colocar vinho novo em odres velhos gera expansão destrutiva, estourando o recipiente. Vinho novo requer vasilhas novas! Preços especiais para atacado. **Ref: Marcos 2.22**
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </aside>
+                </main>
+            </div>
+
+            <!-- Rodapé Master de Fechamento da Edição de 8 Páginas -->
+            <footer class="mt-8 border-t-[6px] border-double border-[#2c241c] pt-6 pb-6 text-center text-[#e0cdb3] rounded-b-xl shadow-[inset_0_30px_30px_rgba(30,20,10,0.6)]" style="background-color: #2c241c;">
+                <h2 class="font-cinzel text-2xl font-bold mb-1 tracking-widest text-[#d1bfa5]">O PUBLICANO INVESTIGA</h2>
+                <p class="text-xs font-lora italic text-[#a39481] mb-4 max-w-xl mx-auto px-4">O jornalismo analítico do primeiro século desvendando as verdades eternas que revolucionaram a história da humanidade.</p>
+                <p class="text-[9px] uppercase tracking-[0.2em] font-bold text-[#73634e]">© Ano 30 d.C. • Material Didático Exclusivo para Escola Bíblica Dominical • Edição Completa de 8 Páginas (Fim)</p>
+            </footer>
+        </section>
+
+    </div>
+
+</body>
+</html>

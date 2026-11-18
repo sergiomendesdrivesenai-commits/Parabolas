@@ -1,0 +1,6 @@
+{
+  "name": "EBD 2027 - As Parábolas de Jesus",
+  "description": "Plataforma e guia expositivo para a Escola Bíblica Dominical (EBD) com cronograma de 22 semanas, mapa realista interativo e timeline histórica das parábolas na Palestina do século I, pilares reformados, gerador de roteiros A4, slides e jornal O Publicano.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
